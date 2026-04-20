@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import heroBar from "@/assets/hero-bar.jpg";
 import logoHat from "@/assets/logo-hat.png";
 import { Instagram, MapPin, Phone, Clock, ChevronDown } from "lucide-react";
+import eventPagode from "@/assets/event-pagode.jpg";
+import eventSertanejo from "@/assets/event-sertanejo.jpg";
+import eventAniversario from "@/assets/event-aniversario.jpg";
 
 const events: EventItem[] = [
   {
@@ -17,6 +20,7 @@ const events: EventItem[] = [
       "Pagode raiz do começo ao fim do pôr do sol. Chopp gelado, churrasquinho e a melhor roda de samba da região.",
     tag: "Pagode",
     ticketUrl: "https://example.com/ingresso/pagode-sunset",
+    image: eventPagode,
   },
   {
     id: "2",
@@ -30,6 +34,7 @@ const events: EventItem[] = [
       "A noite mais aguardada da semana com o melhor do sertanejo raiz e universitário. Pulseira na portaria.",
     tag: "Sertanejo",
     ticketUrl: "https://example.com/ingresso/sexta-sertaneja",
+    image: eventSertanejo,
   },
   {
     id: "3",
@@ -43,6 +48,7 @@ const events: EventItem[] = [
       "Comemore seu aniversário no clima cowboy mais autêntico da cidade. Pacotes especiais para você e a galera.",
     tag: "Aniversário",
     ticketUrl: "https://wa.me/5500000000000?text=Quero%20comemorar%20meu%20anivers%C3%A1rio",
+    image: eventAniversario,
   },
 ];
 

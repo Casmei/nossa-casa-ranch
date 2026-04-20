@@ -1,17 +1,18 @@
-import { Calendar, Clock, MapPin, Ticket } from "lucide-react";
+import { Clock, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export interface EventItem {
   id: string;
   title: string;
   artist: string;
-  date: string; // e.g. "15 NOV"
-  weekday: string; // e.g. "SEX"
+  date: string;
+  weekday: string;
   time: string;
   price: string;
   description: string;
   tag: string;
   ticketUrl: string;
+  image: string;
 }
 
 interface Props {
@@ -24,33 +25,50 @@ export const EventCard = ({ event, index }: Props) => {
 
   return (
     <article
-      className="group relative flex flex-col md:flex-row gap-6 p-6 md:p-8 bg-gradient-card border-2 border-border rounded-md shadow-card hover:shadow-warm hover:border-whiskey/60 transition-all duration-500 animate-fade-up overflow-hidden"
+      className="group relative flex flex-col md:flex-row gap-0 bg-gradient-card border-2 border-border rounded-md shadow-card hover:shadow-warm hover:border-whiskey/60 transition-all duration-500 animate-fade-up overflow-hidden"
       style={{ animationDelay: `${index * 80}ms` }}
     >
-      {/* corner stamps */}
-      <span className="absolute top-2 right-3 font-stamp text-[10px] tracking-widest text-whiskey/50 uppercase">
-        Nº {String(index + 1).padStart(2, "0")}
-      </span>
+      {/* Image */}
+      <div className="relative md:w-[38%] h-56 md:h-auto overflow-hidden">
+        <img
+          src={event.image}
+          alt={`${event.title} — ${event.artist}`}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+          width={1024}
+          height={768}
+        />
+        {/* gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent md:bg-gradient-to-r md:from-card md:via-card/30 md:to-transparent" />
 
-      {/* Date block */}
-      <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-1 md:min-w-[120px] md:border-r-2 md:border-dashed md:border-border md:pr-6">
-        <div className="flex flex-col items-center justify-center bg-gradient-amber rounded-md px-4 py-3 shadow-glow min-w-[88px]">
-          <span className="font-western text-4xl text-primary-foreground leading-none">{day}</span>
-          <span className="font-display font-bold text-xs tracking-[0.2em] text-primary-foreground mt-1">{month}</span>
-        </div>
-        <div className="flex flex-col">
-          <span className="font-stamp text-xs text-cream uppercase tracking-widest">{event.weekday}</span>
-          <span className="flex items-center gap-1 text-muted-foreground text-sm font-display mt-1">
-            <Clock className="w-3.5 h-3.5" /> {event.time}
+        {/* Date badge */}
+        <div className="absolute top-4 left-4 flex flex-col items-center justify-center bg-gradient-amber rounded-md px-4 py-2 shadow-glow min-w-[78px]">
+          <span className="font-western text-3xl text-primary-foreground leading-none">{day}</span>
+          <span className="font-display font-bold text-[10px] tracking-[0.2em] text-primary-foreground mt-0.5">
+            {month}
           </span>
         </div>
+
+        {/* corner stamp */}
+        <span className="absolute top-4 right-4 font-stamp text-[10px] tracking-widest text-cream/80 uppercase bg-background/60 px-2 py-1 rounded-sm border border-whiskey/30">
+          Nº {String(index + 1).padStart(2, "0")}
+        </span>
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col">
-        <span className="inline-block self-start font-stamp text-[11px] uppercase tracking-[0.2em] text-whiskey-glow border border-whiskey/40 px-2 py-0.5 rounded-sm mb-3">
-          {event.tag}
-        </span>
+      <div className="flex-1 flex flex-col p-6 md:p-8">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="inline-block font-stamp text-[11px] uppercase tracking-[0.2em] text-whiskey-glow border border-whiskey/40 px-2 py-0.5 rounded-sm">
+            {event.tag}
+          </span>
+          <span className="font-stamp text-xs text-cream uppercase tracking-widest">
+            {event.weekday}
+          </span>
+          <span className="flex items-center gap-1 text-muted-foreground text-xs font-display">
+            <Clock className="w-3 h-3" /> {event.time}
+          </span>
+        </div>
+
         <h3 className="font-western text-2xl md:text-3xl text-cream leading-tight mb-1">
           {event.title}
         </h3>
@@ -63,7 +81,9 @@ export const EventCard = ({ event, index }: Props) => {
 
         <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-dashed border-border">
           <div className="flex flex-col">
-            <span className="font-stamp text-[10px] text-muted-foreground uppercase tracking-widest">Entrada</span>
+            <span className="font-stamp text-[10px] text-muted-foreground uppercase tracking-widest">
+              Entrada
+            </span>
             <span className="font-western text-2xl text-whiskey">{event.price}</span>
           </div>
           <Button asChild variant="saloon" size="lg">
