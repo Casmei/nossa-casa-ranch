@@ -20,7 +20,7 @@ const events: EventItem[] = [
     description:
       "Pagode raiz do começo ao fim do pôr do sol. Chopp gelado, churrasquinho e a melhor roda de samba da região.",
     tag: "Pagode",
-    ticketUrl: "https://example.com/ingresso/pagode-sunset",
+    ticketUrl: "https://events.byal.org/",
     image: eventPagode,
   },
   {
@@ -34,7 +34,7 @@ const events: EventItem[] = [
     description:
       "A noite mais aguardada da semana com o melhor do sertanejo raiz e universitário. Pulseira na portaria.",
     tag: "Sertanejo",
-    ticketUrl: "https://example.com/ingresso/sexta-sertaneja",
+    ticketUrl: "https://events.byal.org/",
     image: eventSertanejo,
   },
   {
@@ -48,7 +48,7 @@ const events: EventItem[] = [
     description:
       "Comemore seu aniversário no clima cowboy mais autêntico da cidade. Pacotes especiais para você e a galera.",
     tag: "Aniversário",
-    ticketUrl: "https://wa.me/5500000000000?text=Quero%20comemorar%20meu%20anivers%C3%A1rio",
+    ticketUrl: "https://events.byal.org/",
     image: eventAniversario,
   },
 ];
