@@ -1,4 +1,5 @@
 import { EventCard, type EventItem } from "@/components/EventCard";
+import { FeaturedEvent } from "@/components/FeaturedEvent";
 import { Button } from "@/components/ui/button";
 import heroBar from "@/assets/hero-bar.jpg";
 import logoHat from "@/assets/logo-hat.png";
@@ -142,11 +143,28 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-6">
-            {events.map((event, i) => (
-              <EventCard key={event.id} event={event} index={i} />
-            ))}
+          {/* Destaque */}
+          <div className="mb-12">
+            <FeaturedEvent event={events[0]} />
           </div>
+
+          {/* Demais eventos */}
+          {events.length > 1 && (
+            <>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex-1 h-px bg-whiskey/30" />
+                <span className="font-stamp text-xs uppercase tracking-[0.4em] text-whiskey-glow">
+                  ◆ Também na agenda ◆
+                </span>
+                <div className="flex-1 h-px bg-whiskey/30" />
+              </div>
+              <div className="flex flex-col gap-6">
+                {events.slice(1).map((event, i) => (
+                  <EventCard key={event.id} event={event} index={i + 1} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
