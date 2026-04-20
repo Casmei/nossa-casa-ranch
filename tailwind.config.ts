@@ -13,7 +13,28 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        western: ['Rye', 'serif'],
+        stamp: ['"Special Elite"', 'monospace'],
+        display: ['Oswald', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-amber': 'var(--gradient-amber)',
+        'gradient-wood': 'var(--gradient-wood)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-hero': 'var(--gradient-hero)',
+      },
+      boxShadow: {
+        warm: 'var(--shadow-warm)',
+        card: 'var(--shadow-card)',
+        glow: 'var(--shadow-glow)',
+      },
       colors: {
+        whiskey: 'hsl(var(--whiskey))',
+        'whiskey-glow': 'hsl(var(--whiskey-glow))',
+        cream: 'hsl(var(--cream))',
+        leather: 'hsl(var(--leather))',
+        ember: 'hsl(var(--ember))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -64,26 +85,22 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+        "flicker": {
+          "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 8px hsl(var(--whiskey-glow) / 0.6))" },
+          "50%": { opacity: "0.92", filter: "drop-shadow(0 0 14px hsl(var(--whiskey-glow) / 0.9))" },
         },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "flicker": "flicker 3s ease-in-out infinite",
+        "fade-up": "fade-up 0.7s ease-out both",
       },
     },
   },
