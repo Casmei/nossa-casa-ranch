@@ -75,7 +75,7 @@ export const EventCard = ({ event, index }: Props) => {
         <p className="font-display text-base text-whiskey-glow uppercase tracking-wider mb-3">
           com {event.artist}
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed mb-5 max-w-xl">
+        <p className="text-muted-foreground text-sm leading-relaxed mb-5 max-w-xl whitespace-pre-wrap">
           {event.description}
         </p>
 

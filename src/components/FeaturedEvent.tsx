@@ -63,7 +63,7 @@ export const FeaturedEvent = ({ event }: Props) => {
         <p className="font-display text-lg text-whiskey-glow uppercase tracking-wider mb-4">
           com {event.artist}
         </p>
-        <p className="text-muted-foreground text-base leading-relaxed mb-6 max-w-xl">
+        <p className="text-muted-foreground text-base leading-relaxed mb-6 max-w-xl whitespace-pre-wrap">
           {event.description}
         </p>
 

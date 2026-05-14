@@ -11,16 +11,16 @@ import eventAniversario from "@/assets/event-aniversario.jpg";
 const events: EventItem[] = [
   {
     id: "1",
-    title: "Pagode Sunset",
-    artist: "Emerson Paulino",
-    date: "15 NOV",
+    title: "Pagoniver da Ary - 3ª edição",
+    artist: "Ary Goodoy",
+    date: "30 MAI",
     weekday: "SÁBADO",
-    time: "17h00",
+    time: "18h00",
     price: "R$ 20,00",
     description:
-      "Pagode raiz do começo ao fim do pôr do sol. Chopp gelado, churrasquinho e a melhor roda de samba da região.",
+      "O Pagoniver da Ary está chegando na sua 3ª edição e eu garanto: vai ser SURREAL! ✨\n \nDia 30 de maio, nosso encontro marcado é na Nossa Casa Choperia. A cada ano o projeto cresce mais e, desta vez, preparei algo histórico com vários convidados de peso! 🎤🔥\n\nPreparem o coração, a voz e o sorriso. Vamos viver essa história juntos!",
     tag: "Pagode",
-    ticketUrl: "https://events.byal.org/",
+    ticketUrl: "https://events.byal.org/event/12ced8c7-e3a9-454b-89ac-d77b18400cd8",
     image: eventPagode,
   },
   {
@@ -148,7 +148,7 @@ const Index = () => {
             <FeaturedEvent event={events[0]} />
           </div>
 
-          {/* Demais eventos */}
+          {/* Demais eventos
           {events.length > 1 && (
             <>
               <div className="flex items-center gap-4 mb-8">
@@ -164,7 +164,7 @@ const Index = () => {
                 ))}
               </div>
             </>
-          )}
+          )} */}
         </div>
       </section>
 
@@ -192,12 +192,12 @@ const Index = () => {
               <MapPin className="w-8 h-8 text-whiskey" />
               <h3 className="font-western text-2xl text-cream">Endereço</h3>
               <p className="font-display text-muted-foreground leading-relaxed">
-                Rua do Sertão, 123
+                Avenida Olindo de Miranda, 940
                 <br />
-                Centro — Sua Cidade/UF
+                Centro — Almenara/MG
               </p>
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/USAZZg8fks17pV9h6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-stamp text-xs uppercase tracking-widest text-whiskey-glow hover:text-cream transition-colors mt-2"
@@ -210,12 +210,11 @@ const Index = () => {
               <Clock className="w-8 h-8 text-whiskey" />
               <h3 className="font-western text-2xl text-cream">Horário</h3>
               <ul className="font-display text-muted-foreground space-y-1">
-                <li>Qui — Sex: 18h às 02h</li>
-                <li>Sáb: 14h às 03h</li>
-                <li>Dom: 14h às 22h</li>
+                <li>Qua — Sáb: 18h às 02h</li>
+                <li>Dom: 17h às 00h</li>
               </ul>
               <span className="font-stamp text-xs uppercase tracking-widest text-whiskey-glow mt-2">
-                Fechado seg/ter/qua
+                Fechado seg/ter
               </span>
             </div>
 
@@ -223,10 +222,10 @@ const Index = () => {
               <Phone className="w-8 h-8 text-whiskey" />
               <h3 className="font-western text-2xl text-cream">Contato</h3>
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5533988504741"
                 className="font-display text-muted-foreground hover:text-cream transition-colors"
               >
-                WhatsApp: (00) 00000-0000
+                WhatsApp: (33) 98850-4741
               </a>
               <a
                 href="https://instagram.com/nossacasachoperia"
