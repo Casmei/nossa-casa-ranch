@@ -123,8 +123,8 @@ const Index = () => {
       {/* DIVIDER */}
       <div className="relative h-12 bg-gradient-wood border-y-2 border-whiskey/30 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 grain" />
-        <span className="font-stamp text-xs uppercase tracking-[0.5em] text-whiskey-glow z-10">
-          ◆ Programação ◆ Nossa Casa ◆ Programação ◆
+        <span className="font-stamp text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.4em] md:tracking-[0.5em] whitespace-nowrap text-whiskey-glow z-10">
+          Programação ◆ Nossa Casa ◆ Programação
         </span>
       </div>
 
