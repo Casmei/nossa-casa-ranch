@@ -4,52 +4,49 @@ import { Button } from "@/components/ui/button";
 import heroBar from "@/assets/hero-bar.jpg";
 import logoHat from "@/assets/logo-hat.png";
 import { Instagram, MapPin, Phone, Clock, ChevronDown } from "lucide-react";
-import eventPagode from "@/assets/event-pagode.jpg";
-import eventSertanejo from "@/assets/event-sertanejo.jpg";
-import eventAniversario from "@/assets/event-aniversario.jpg";
+import brasilMarrocos from "@/assets/brasil-marrocos.jpg";
+import brasilHaiti from "@/assets/brasil-haiti.jpg";
+import brasilEscocia from "@/assets/brasil-escocia.jpg";
 
 const events: EventItem[] = [
   {
     id: "1",
-    title: "Pagoniver da Ary - 3ª edição",
-    artist: "Ary Goodoy",
-    date: "30 MAI",
+    title: "Brasil X Marrocos",
+    artist: "Pagode Pós-jogo",
+    date: "13 JUN",
     weekday: "SÁBADO",
-    time: "18h00",
-    price: "R$ 20,00",
-    description:
-      "O Pagoniver da Ary está chegando na sua 3ª edição e eu garanto: vai ser SURREAL! ✨\n \nDia 30 de maio, nosso encontro marcado é na Nossa Casa Choperia. A cada ano o projeto cresce mais e, desta vez, preparei algo histórico com vários convidados de peso! 🎤🔥\n\nPreparem o coração, a voz e o sorriso. Vamos viver essa história juntos!",
-    tag: "Pagode",
-    ticketUrl: "https://events.byal.org/event/12ced8c7-e3a9-454b-89ac-d77b18400cd8",
-    image: eventPagode,
+    time: "19h00",
+    price: "R$ 25,00",
+    description: "A casa oficial da torcida RAIZ! Transmissão ao vivo em super telão.\n\nPós-jogo tem pagode até as 2h da manhã! Bom futebol, chopp gelado e um pagode pra fechar a noite.\n\n*Reserva antecipada obrigatória (vagas limitadas).*",
+    tag: "Futebol",
+    ticketUrl: "https://events.byal.org/event/9ca5acef-d144-4f25-b511-4d6340d2271e",
+    image: brasilMarrocos,
   },
   {
     id: "2",
-    title: "Sexta Sertaneja",
-    artist: "Altobelly & O Comandante",
-    date: "05 DEZ",
+    title: "Brasil X Haiti",
+    artist: "Ianzinho e o Comandante",
+    date: "19 JUN",
     weekday: "SEXTA",
-    time: "21h00",
-    price: "R$ 20,00",
-    description:
-      "A noite mais aguardada da semana com o melhor do sertanejo raiz e universitário. Pulseira na portaria.",
-    tag: "Sertanejo",
-    ticketUrl: "https://events.byal.org/",
-    image: eventSertanejo,
+    time: "21h30",
+    price: "R$ 25,00",
+    description: "A casa oficial da torcida RAIZ! Transmissão ao vivo em super telão.\n\nShow com Ianzinho e o Comandante antes do jogo (a partir das 17h) e depois do jogo até o fim da festa!\n\n*Reserva antecipada obrigatória (vagas limitadas).*",
+    tag: "Futebol",
+    ticketUrl: "https://events.byal.org/event/170c2850-4158-4623-aedc-1358b13cf07a",
+    image: brasilHaiti,
   },
   {
     id: "3",
-    title: "Ocê Merece um Aniversário",
-    artist: "Nossa Casa Choperia",
-    date: "TODO MÊS",
-    weekday: "AGENDE",
-    time: "A combinar",
-    price: "Consulte",
-    description:
-      "Comemore seu aniversário no clima cowboy mais autêntico da cidade. Pacotes especiais para você e a galera.",
-    tag: "Aniversário",
-    ticketUrl: "https://events.byal.org/",
-    image: eventAniversario,
+    title: "Brasil X Escócia",
+    artist: "Chopp em Dobro",
+    date: "24 JUN",
+    weekday: "QUARTA",
+    time: "19h00",
+    price: "R$ 25,00",
+    description: "A casa oficial da torcida RAIZ! Transmissão ao vivo em super telão.\n\nChegue cedo! Happy Hour com CHOPP EM DOBRO das 17h até as 19h. Ambiente completo para você e sua torcida.\n\n*Reserva antecipada obrigatória (vagas limitadas).*",
+    tag: "Futebol",
+    ticketUrl: "https://events.byal.org/event/8335414f-4510-4bb8-8d46-9b1787006bda",
+    image: brasilEscocia,
   },
 ];
 
@@ -148,12 +145,12 @@ const Index = () => {
             <FeaturedEvent event={events[0]} />
           </div>
 
-          {/* Demais eventos
+          {/* Demais eventos */}
           {events.length > 1 && (
             <>
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-8 mt-12">
                 <div className="flex-1 h-px bg-whiskey/30" />
-                <span className="font-stamp text-xs uppercase tracking-[0.4em] text-whiskey-glow">
+                <span className="font-stamp text-xs uppercase tracking-[0.4em] text-whiskey-glow text-center">
                   ◆ Também na agenda ◆
                 </span>
                 <div className="flex-1 h-px bg-whiskey/30" />
@@ -164,7 +161,7 @@ const Index = () => {
                 ))}
               </div>
             </>
-          )} */}
+          )}
         </div>
       </section>
 
