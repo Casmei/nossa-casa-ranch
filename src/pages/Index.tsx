@@ -20,7 +20,7 @@ const events: EventItem[] = [
     price: "R$ 25,00",
     description: "Uma noite especial para viver a dois. Amor, modão e boas histórias combinam com a Nossa Casa!\n\nVoz e violão para embalar a noite do amor e pratos especiais.\n\n*Reserva antecipada (R$ 25,00 por pessoa). Vagas limitadas!*",
     tag: "Especial",
-    ticketUrl: "#",
+    ticketUrl: "https://events.byal.org/event/223e9cda-95e3-413c-90ed-28a476b2efa6",
     image: diaDosNamorados,
   },
   {
