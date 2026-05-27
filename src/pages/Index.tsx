@@ -7,8 +7,22 @@ import { Instagram, MapPin, Phone, Clock, ChevronDown } from "lucide-react";
 import brasilMarrocos from "@/assets/brasil-marrocos.jpg";
 import brasilHaiti from "@/assets/brasil-haiti.jpg";
 import brasilEscocia from "@/assets/brasil-escocia.jpg";
+import diaDosNamorados from "@/assets/dia-dos-namorados.jpg";
 
 const events: EventItem[] = [
+  {
+    id: "namorados",
+    title: "Dia dos Namorados",
+    artist: "Voz e Violão",
+    date: "12 JUN",
+    weekday: "SEXTA",
+    time: "19h00",
+    price: "R$ 25,00",
+    description: "Uma noite especial para viver a dois. Amor, modão e boas histórias combinam com a Nossa Casa!\n\nVoz e violão para embalar a noite do amor e pratos especiais.\n\n*Reserva antecipada (R$ 25,00 por pessoa). Vagas limitadas!*",
+    tag: "Especial",
+    ticketUrl: "#",
+    image: diaDosNamorados,
+  },
   {
     id: "1",
     title: "Brasil X Marrocos",
